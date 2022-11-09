@@ -6,3 +6,10 @@
 
 to run the server : ./build/server
 to run the client:  ./build/server
+
+for tests
+gcc ./tests/main.c -o tests/test1
+gcc ./tests/main2.c -o tests/test2
+
+./tests/test1
+./tests/test2

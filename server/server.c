@@ -63,7 +63,7 @@ int main()
 
         // Building response
         res.size = req.data;
-        for (size_t i = 0; i < res.size; i++)
+        for (int i = 0; i < res.size; i++)
         {
             res.data[i] = (rand() % (UPPER - LOWER + 1)) + LOWER;
         }

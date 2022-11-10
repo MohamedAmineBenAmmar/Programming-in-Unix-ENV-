@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
 
     // Sending request
     req_flag = write(fifo1, &req, sizeof(Request));
+    close(fifo1);
     if (req_flag == -1)
     {
         printf("Error occured while creating request\n");
@@ -50,6 +51,7 @@ int main(int argc, char *argv[])
 
     // Reading the answer from the server
     res_flag = read(fifo2, &res, sizeof(Response));
+    close(fifo2);
     if (res_flag == -1)
     {
         printf("Error occured while receiving response from the server\n");
@@ -74,9 +76,6 @@ int main(int argc, char *argv[])
             kill(res.server_pid, SIGUSR2);
         }
     }
-
-    close(fifo1);
-    close(fifo2);
 
     return 0;
 }

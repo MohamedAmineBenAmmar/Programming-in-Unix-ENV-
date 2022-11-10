@@ -2,6 +2,7 @@
     "files.associations": {
         "handlers_serv.h": "c",
         "serv_cli_fifo.h": "c",
-        "handlers_cli.h": "c"
+        "handlers_cli.h": "c",
+        "types.h": "c"
     }
 }

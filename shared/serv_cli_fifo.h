@@ -37,5 +37,4 @@ typedef struct Response
     int server_pid;
 } Response;
 
-
 #endif

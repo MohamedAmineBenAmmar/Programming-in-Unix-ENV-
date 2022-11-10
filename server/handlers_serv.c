@@ -5,9 +5,10 @@ void hand_reveil(int sig){
     printf("Response receipt from client noticed by the server\n");
 }
 
-
 void fin_serveur(int sig)
 {
-    printf("Going to shut down the server\n");
-    exit(0);
+    printf("Going to shut down the server\nGoing to delete FIFO used for server and client communication\n");
+    unlink(FIFO1);
+    unlink(FIFO2);
+    exit(0);   
 }

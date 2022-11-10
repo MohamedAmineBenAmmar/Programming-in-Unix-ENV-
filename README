@@ -1,15 +1,7 @@
-0: correct ending status
-1: error occured while accessig / creating a ressource
-2: request / response: error code
-3: erro in server child creation
+Errors ID description:
+0: Correct ending status
+1: Error occured while accessig / creating a ressource
+2: Request / Response: error code
 
-
-to run the server : ./build/server
-to run the client:  ./build/server
-
-for tests
-gcc ./tests/main.c -o tests/test1
-gcc ./tests/main2.c -o tests/test2
-
-./tests/test1
-./tests/test2
+To run the server : ./build/server
+To run the client:  ./build/server

@@ -89,6 +89,7 @@ int main()
 
         // send SIGUSR1 to the user to be notified about the response construction
         kill(req.client_pid, SIGUSR1);
+
     }
 
     return 0;

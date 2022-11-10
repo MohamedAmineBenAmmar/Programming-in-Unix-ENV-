@@ -1,7 +1,8 @@
 #include "../shared/serv_cli_fifo.h"
 #include "handlers_cli.h"
 
-int main(int argc, char *argv[])
+
+    int main(int argc, char *argv[])
 {
     // Declaration
     Request req;
@@ -40,6 +41,7 @@ int main(int argc, char *argv[])
     // Sending request
     req_flag = write(fifo1, &req, sizeof(Request));
     close(fifo1);
+    
     if (req_flag == -1)
     {
         printf("Error occured while creating request\n");
@@ -51,7 +53,8 @@ int main(int argc, char *argv[])
 
     // Reading the answer from the server
     res_flag = read(fifo2, &res, sizeof(Response));
-    close(fifo2);
+    close(fifo2);  
+
     if (res_flag == -1)
     {
         printf("Error occured while receiving response from the server\n");
